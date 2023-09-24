@@ -195,7 +195,7 @@ import axios from "axios";
       //helper function of show timezone
       getTimeZone(latitude, longitude){
         const timestamp = Math.floor(Date.now() / 1000)
-        axios.get(`https://maps.googleapis.com/maps/api/timezone/json?location=${latitude},${longitude}&timestamp=${timestamp}&key=AIzaSyDG5YJEWj154kGfvisq3BXwWY-zSeEWIlU`)
+        axios.get(`https://maps.googleapis.com/maps/api/timezone/json?location=${latitude},${longitude}&timestamp=${timestamp}&key=API_KEY`)
         .then((response) => {
             if(response.data.timeZoneName){
               this.timezone = "Timezone: " + response.data.timeZoneName
