@@ -2,7 +2,7 @@
   <div>
     <section class="ui two column centered grid" style="position:relative;z-index:1">
       <div class="column">
-        <form class="ui segment large form">
+        <div class="ui segment large form">
           <div class="ui message red" v-show="error">{{error}}</div>
           <div class="ui segment">
             <div class="field">
@@ -12,6 +12,7 @@
                   placeholder="Enter your address"
                   v-model="address"
                   ref="autocomplete"
+                  @keyup.enter="getAddressByText"
                 />
                 <i class="map pin link icon" @click="getCurrentPosition"></i>
               </div>
@@ -27,7 +28,7 @@
             
             <button class="ui button link search" @click="getAddressByText">Search</button>
           </div>
-        </form>
+        </div>
       </div>
     </section>
     
