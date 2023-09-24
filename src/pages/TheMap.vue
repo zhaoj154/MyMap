@@ -75,6 +75,7 @@ import axios from "axios";
             pageSize: 10,
             localDate: null,
             timer: '',
+            map: {}
         }
     },
 
