@@ -79,6 +79,7 @@ import axios from "axios";
     },
 
     mounted() {
+      this.timer = setInterval(this.updateTime, 1000);
       new google.maps.Map(this.$refs["map"], {
         zoom: 8,
         center: new google.maps.LatLng(-34.397, 150.644),
@@ -87,7 +88,7 @@ import axios from "axios";
 
       this.getTimeZone(-34.397, 150.644)
 
-      this.timer = setInterval(this.updateTime, 1000);
+      
     },
 
     beforeDestroy() {
